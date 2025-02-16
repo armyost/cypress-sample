@@ -22,8 +22,8 @@ jobs:
         with:
             browser: chrome
             record: true
-            # build: yarn build
-            start: yarn dev
+            build: yarn build:ci
+            start: yarn start:ci
             wait-on: 'http://localhost:3000'
-        # env:
-        #     CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+        env:
+            CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
